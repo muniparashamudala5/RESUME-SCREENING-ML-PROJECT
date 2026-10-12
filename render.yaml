@@ -1,0 +1,10 @@
+# Render blueprint: New + > Blueprint, then pick this repository.
+services:
+  - type: web
+    name: resume-screener
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MAX_UPLOAD_MB
+        value: "5"
