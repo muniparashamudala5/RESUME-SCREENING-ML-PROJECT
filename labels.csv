@@ -1,0 +1,9 @@
+filename,role,label
+strong_data_scientist.pdf,data_scientist,shortlist
+scanned_data_scientist.pdf,data_scientist,shortlist
+analyst_fresher.pdf,data_analyst,shortlist
+analyst_fresher.pdf,data_scientist,reject
+frontend_developer.pdf,frontend_developer,shortlist
+frontend_developer.pdf,data_scientist,reject
+two_column_ml_engineer.pdf,machine_learning_engineer,shortlist
+two_column_ml_engineer.pdf,frontend_developer,reject

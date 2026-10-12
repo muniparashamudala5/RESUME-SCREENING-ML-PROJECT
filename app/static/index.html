@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume screener</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <h1>Resume screener</h1>
+    <p>Upload a PDF resume, choose a role, and see how it matches the skills that role asks for.</p>
+  </header>
+
+  <main class="desk">
+    <form id="screen-form" class="intake" novalidate>
+      <div class="field">
+        <label for="role">Role</label>
+        <select id="role" name="role" required></select>
+        <p id="role-brief" class="brief"></p>
+      </div>
+
+      <div class="field">
+        <label for="file">Resume (PDF, up to 5 MB)</label>
+        <div class="drop">
+          <input id="file" name="file" type="file" accept="application/pdf,.pdf" required>
+          <span id="file-name">Choose a PDF or drop it here</span>
+        </div>
+      </div>
+
+      <details class="field">
+        <summary>Add a job description (optional)</summary>
+        <textarea id="jd" name="job_description" rows="6" maxlength="5000"
+          placeholder="Paste the job description. It only affects the text-similarity part of the score."></textarea>
+      </details>
+
+      <button id="submit" type="submit">Screen resume</button>
+      <p class="privacy">The file is read in memory and is not stored.</p>
+    </form>
+
+    <section id="result" class="sheet" aria-live="polite" tabindex="-1">
+      <p class="empty">Results appear here after you screen a resume.</p>
+    </section>
+  </main>
+</body>
+</html>

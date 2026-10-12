@@ -1,0 +1,155 @@
+{
+  "_readme": "Edit this file to add roles or tune scoring. A skill written as a list, e.g. [\"Power BI\", \"Tableau\"], is an 'any of' requirement: one match satisfies it. min_education_level: 1 = diploma, 2 = bachelor's, 3 = master's, 4 = PhD.",
+
+  "scoring": {
+    "weights": {
+      "must_have": 0.45,
+      "good_to_have": 0.15,
+      "keywords": 0.10,
+      "similarity": 0.10,
+      "experience": 0.10,
+      "education": 0.10
+    },
+    "declared_only_credit": 0.8,
+    "similarity_saturation": 0.45,
+    "thresholds": {
+      "shortlist_score": 70,
+      "review_score": 50,
+      "shortlist_min_must_coverage": 0.70,
+      "review_min_must_coverage": 0.50
+    }
+  },
+
+  "roles": {
+    "data_analyst": {
+      "title": "Data Analyst",
+      "description": "Collect, clean and analyse business data to find trends and answer questions. Write SQL queries, build dashboards and reports in Power BI or Tableau, use Excel and Python for analysis, and present insights and KPIs to stakeholders.",
+      "must_have": ["SQL", "Excel", ["Power BI", "Tableau"], "Data Visualization", "Statistics"],
+      "good_to_have": ["Python", "Pandas", "ETL", "A/B Testing", "Snowflake", "BigQuery", "Looker", "Git"],
+      "keywords": ["Data Cleaning", "EDA", "KPI", "Dashboards", "Business Intelligence", "Data Analysis", "Reporting"],
+      "min_experience_years": 0,
+      "min_education_level": 2
+    },
+
+    "data_scientist": {
+      "title": "Data Scientist",
+      "description": "Build and evaluate machine learning and statistical models on real data. Explore data, engineer features, train classification, regression and clustering models with Python and scikit-learn, validate them, and communicate results to the business.",
+      "must_have": ["Python", "SQL", "Machine Learning", "Statistics", "Pandas", "scikit-learn"],
+      "good_to_have": ["Deep Learning", ["TensorFlow", "PyTorch"], "NLP", ["XGBoost", "LightGBM"], "Data Visualization", "Git", "Jupyter", ["AWS", "GCP", "Azure"], "Spark"],
+      "keywords": ["Feature Engineering", "EDA", "Predictive Modeling", "Time Series", "Classification", "Regression", "Clustering", "Hyperparameter Tuning", "A/B Testing", "Cross Validation"],
+      "min_experience_years": 0,
+      "min_education_level": 2
+    },
+
+    "machine_learning_engineer": {
+      "title": "Machine Learning Engineer",
+      "description": "Take machine learning models from notebook to production. Train deep learning models with PyTorch or TensorFlow, package them with Docker, serve them through REST APIs, track experiments with MLflow, and monitor deployed models on cloud infrastructure.",
+      "must_have": ["Python", "Machine Learning", "Deep Learning", ["TensorFlow", "PyTorch"], "Model Deployment", "Docker", "Git"],
+      "good_to_have": [["FastAPI", "Flask"], "MLflow", "Kubernetes", ["AWS", "GCP", "Azure"], "CI/CD", "SQL", "NLP", "Computer Vision", "LLM", "Hugging Face", "Spark", "Airflow", "Kafka"],
+      "keywords": ["MLOps", "Feature Engineering", "Model Monitoring", "Hyperparameter Tuning", "REST API", "ETL", "Transfer Learning", "Inference", "Experiment Tracking"],
+      "min_experience_years": 1,
+      "min_education_level": 2
+    },
+
+    "python_backend_developer": {
+      "title": "Python Backend Developer",
+      "description": "Design and build backend services and REST APIs in Python using FastAPI, Django or Flask. Model data in relational databases, write tests, containerise services with Docker, and deploy and maintain them on cloud platforms.",
+      "must_have": ["Python", ["FastAPI", "Django", "Flask"], "REST API", "SQL", "Git"],
+      "good_to_have": ["Docker", "Redis", "MongoDB", "Celery", ["AWS", "GCP", "Azure"], "CI/CD", "Unit Testing", "Microservices", "Linux", "SQLAlchemy", "Authentication"],
+      "keywords": ["OOP", "Data Structures", "System Design", "Backend Development", "Caching", "Agile", "Scalability"],
+      "min_experience_years": 1,
+      "min_education_level": 2
+    },
+
+    "frontend_developer": {
+      "title": "Frontend Developer",
+      "description": "Build responsive, accessible user interfaces for the web with HTML, CSS and JavaScript, using a modern framework such as React, Vue or Angular. Consume REST APIs, write component tests and optimise page performance across browsers.",
+      "must_have": ["HTML", "CSS", "JavaScript", ["React", "Vue", "Angular"], "Git", "Responsive Design"],
+      "good_to_have": ["TypeScript", "Redux", "Tailwind CSS", "Next.js", "REST API", "Node.js", "Figma", "Unit Testing", "Webpack"],
+      "keywords": ["Accessibility", "Performance Optimization", "Cross Browser", "User Interface", "Agile", "Component Library"],
+      "min_experience_years": 0,
+      "min_education_level": 1
+    }
+  },
+
+  "aliases": {
+    "Python": ["python3"],
+    "SQL": ["mysql", "postgresql", "postgres", "sqlite", "t-sql", "pl/sql", "sql server", "mssql"],
+    "Machine Learning": ["ml"],
+    "Deep Learning": ["neural networks", "neural network"],
+    "scikit-learn": ["sklearn"],
+    "PyTorch": ["torch"],
+    "NLP": ["natural language processing"],
+    "Statistics": ["statistical analysis", "statistical", "statistical modeling", "statistical modelling"],
+    "Data Visualization": ["data visualisation", "visualization", "visualisation"],
+    "Power BI": ["powerbi"],
+    "Excel": ["microsoft excel", "ms excel", "advanced excel"],
+    "Dashboards": ["dashboard"],
+    "Data Analysis": ["data analytics", "analyzing data", "analysing data"],
+    "Data Cleaning": ["data cleansing", "data wrangling", "data preprocessing", "data pre-processing", "data preparation"],
+    "EDA": ["exploratory data analysis"],
+    "KPI": ["kpis", "key performance indicators"],
+    "Business Intelligence": ["bi tools", "bi dashboards"],
+    "Reporting": ["reports"],
+    "ETL": ["etl pipelines", "data pipelines", "data pipeline", "elt"],
+    "Predictive Modeling": ["predictive modelling", "predictive models", "predictive analytics"],
+    "Time Series": ["forecasting"],
+    "Cross Validation": ["k-fold", "kfold"],
+    "Hyperparameter Tuning": ["hyper-parameter tuning", "hyperparameter optimization", "grid search", "optuna"],
+    "A/B Testing": ["ab testing", "a/b tests", "split testing"],
+    "Jupyter": ["jupyter notebook", "jupyter notebooks", "jupyterlab", "colab", "google colab"],
+    "Spark": ["pyspark", "apache spark"],
+    "Airflow": ["apache airflow"],
+    "Kafka": ["apache kafka"],
+    "XGBoost": ["xgb"],
+    "LightGBM": ["lgbm", "light gbm"],
+    "MLflow": ["ml flow"],
+    "Model Deployment": ["model serving", "deployed models", "deploying models", "ml deployment", "deployed machine learning"],
+    "Model Monitoring": ["drift detection", "monitoring models"],
+    "Experiment Tracking": ["mlflow", "weights and biases", "wandb"],
+    "MLOps": ["ml ops", "machine learning operations"],
+    "Transfer Learning": ["fine-tuning", "fine tuning"],
+    "Inference": ["model inference"],
+    "Computer Vision": ["opencv", "image classification", "object detection"],
+    "LLM": ["large language models", "large language model", "llms"],
+    "Hugging Face": ["huggingface", "transformers"],
+    "Docker": ["dockerfile", "docker compose"],
+    "Kubernetes": ["k8s"],
+    "AWS": ["amazon web services", "ec2", "s3", "sagemaker"],
+    "GCP": ["google cloud", "google cloud platform"],
+    "Azure": ["microsoft azure"],
+    "Git": ["github", "gitlab", "version control"],
+    "CI/CD": ["cicd", "ci cd", "github actions", "jenkins"],
+    "Linux": ["ubuntu", "unix", "bash", "shell scripting"],
+    "FastAPI": ["fast api"],
+    "REST API": ["rest apis", "restful api", "restful apis", "restful services", "rest api's"],
+    "Unit Testing": ["pytest", "unittest", "unit tests", "test driven development", "tdd"],
+    "OOP": ["object oriented programming", "object-oriented programming", "object oriented"],
+    "Data Structures": ["dsa", "data structures and algorithms"],
+    "System Design": ["software architecture", "distributed systems"],
+    "Backend Development": ["backend developer", "back-end development", "backend services", "server-side"],
+    "Microservices": ["microservice"],
+    "Authentication": ["jwt", "oauth", "oauth2"],
+    "Agile": ["scrum"],
+    "MongoDB": ["mongo db", "mongo"],
+    "Scalability": ["scalable"],
+    "JavaScript": ["es6", "ecmascript"],
+    "TypeScript": [],
+    "React": ["react.js", "reactjs", "react js"],
+    "Vue": ["vue.js", "vuejs"],
+    "Angular": ["angularjs"],
+    "Next.js": ["nextjs", "next js"],
+    "Node.js": ["nodejs", "node js"],
+    "HTML": ["html5"],
+    "CSS": ["css3", "scss", "sass"],
+    "Tailwind CSS": ["tailwind", "tailwindcss"],
+    "Responsive Design": ["responsive web design", "responsive layouts", "mobile-first", "mobile first"],
+    "Accessibility": ["wcag", "a11y", "aria"],
+    "Performance Optimization": ["performance optimisation", "web performance", "lighthouse"],
+    "Cross Browser": ["cross-browser", "browser compatibility"],
+    "User Interface": ["ui design", "ui/ux", "ux design"],
+    "Component Library": ["design system", "storybook"],
+    "Looker": ["looker studio", "data studio"],
+    "BigQuery": ["big query"]
+  }
+}
